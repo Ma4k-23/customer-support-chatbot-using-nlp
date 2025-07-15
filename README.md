@@ -78,10 +78,14 @@ Multinomial Naive Bayes predicts the most likely intent
 
 A relevant response is selected and returned to the user
 
-📸 Screenshots
-💬 Chat UI
+## 📸 Screenshots
 
-🔁 Demo in Action (GIF)
+### Chat UI
+![Chat UI](chat-ui.png)
+
+### Demo in Action
+![Demo GIF](demo.gif)
+
 
 You can replace chat-ui.png and demo.gif with your own screenshots or recordings.
 
