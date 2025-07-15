@@ -1,0 +1,54 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good evening"],
+      "responses": ["Hello! How can I help you today?", "Hi there! What can I do for you?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye", "Talk to you soon"],
+      "responses": ["Goodbye! Have a great day!", "See you again soon!"]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Appreciate it"],
+      "responses": ["You're welcome!", "Happy to help!", "Anytime!"]
+    },
+    {
+      "tag": "refund",
+      "patterns": ["I want a refund", "Refund my money", "Return the item", "How to get a refund?"],
+      "responses": ["Sure, could you please provide your order ID?", "We’ll start your refund once we verify your order."]
+    },
+    {
+      "tag": "order_status",
+      "patterns": ["Where is my order", "Track my order", "Order status", "Check shipping status"],
+      "responses": ["Please provide your order number to check the status."]
+    },
+    {
+      "tag": "cancel_order",
+      "patterns": ["I want to cancel my order", "Cancel order", "Can I stop my order?", "How to cancel?"],
+      "responses": ["Please share your order ID to proceed with cancellation."]
+    },
+    {
+      "tag": "product_info",
+      "patterns": ["Tell me about this product", "What are the features?", "Details of the item", "Product info"],
+      "responses": ["Could you specify the product name or ID?", "I’ll need the product name to give you the details."]
+    },
+    {
+      "tag": "technical_support",
+      "patterns": ["App is not working", "Facing login issue", "Site crashed", "I have a technical problem"],
+      "responses": ["Sorry to hear that! Please describe the issue in more detail.", "Let me connect you with our tech support."]
+    },
+    {
+      "tag": "shipping_policy",
+      "patterns": ["What are your shipping policies?", "Do you ship internationally?", "How long does delivery take?"],
+      "responses": ["We offer free domestic shipping. International delivery may take 10–15 days."]
+    },
+    {
+      "tag": "feedback",
+      "patterns": ["I want to give feedback", "Where can I leave a review?", "Share my experience"],
+      "responses": ["We'd love to hear your thoughts! Please visit our feedback page or share it here."]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NovaTech Support Chat</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+  <header>
+  <img src="https://img.icons8.com/color/48/000000/artificial-intelligence.png" alt="NovaTech Logo" class="logo" />
+  <div class="header-text">
+    <h1>NovaTech Solutions</h1>
+    <p>AI-Powered Customer Support</p>
+  </div>
+</header>
+
+
+    <!-- Chat Area -->
+    <div id="chat-box" class="chat-box"></div>
+
+    <!-- Chat Input -->
+    <form id="chat-form" class="chat-form">
+      <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off" required />
+      <button type="submit">Send</button>
+    </form>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 NovaTech Solutions • Powered by AI</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("chat-form").onsubmit = async function (e) {
+      e.preventDefault();
+      const inputBox = document.getElementById("user-input");
+      const userMessage = inputBox.value;
+      document.getElementById("chat-box").innerHTML += "<div class='message user'>" + userMessage + "</div>";
+      inputBox.value = "";
+
+      const res = await fetch("/ask", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ message: userMessage })
+      });
+
+      const data = await res.json();
+      document.getElementById("chat-box").innerHTML += "<div class='message bot'>" + data.response + "</div>";
+      document.getElementById("chat-box").scrollTop = document.getElementById("chat-box").scrollHeight;
+    };
+  </script>
+</body>
+</html>
