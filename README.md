@@ -49,15 +49,11 @@ customer-support-chatbot-using-nlp/
 └── templates/
 └── index.html
 
-yaml
-Copy
-Edit
 
----
 
 ## 💻 How to Run Locally
 
-```bash
+
 # 1. Clone the repo
 git clone https://github.com/Ma4k-23/customer-support-chatbot-using-nlp.git
 cd customer-support-chatbot-using-nlp
